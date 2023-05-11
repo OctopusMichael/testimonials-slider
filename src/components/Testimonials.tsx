@@ -16,20 +16,19 @@ const Testimonials = () => {
       opacity: 0,
       transition: { duration: 1, ease: "easeInOut" },
     },
-    /*   transition : { duration: 0.5, ease: "easeInOut" }  */
   };
   return (
     <section className="container">
       <div className="section-testimonial">
-        <div className="section-img">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={variants}
+          className="section-img"
+        >
           {slider ? (
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              src={avatar1}
-              alt="img-1"
-            />
+            <img src={avatar1} alt="img-1" />
           ) : (
             <img src={avatar2} alt="img-2" />
           )}
@@ -41,43 +40,26 @@ const Testimonials = () => {
               {" "}
             </button>
           </div>
-        </div>
-        <div className="section-text">
+        </motion.div>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeInOut" },
+          }}
+          className="section-text"
+        >
           {slider ? (
             <>
-              <motion.p
-                initial={{ x: -100, opacity: 0 }}
-                animate={{
-                  x: 0,
-                  opacity: 1,
-                  transition: { duration: 1, ease: "easeInOut" },
-                }}
-              >
+              <p>
                 “ I’ve been interested in coding for a while but never taken the
                 jump, until now. I couldn’t recommend this course enough. I’m
                 now in the job of my dreams and so excited about the future. ”
-              </motion.p>
+              </p>
               <div className="user">
-                <motion.h4
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                    transition: { duration: 1, ease: "easeInOut" },
-                  }}
-                >
-                  Tanya Sinclair
-                </motion.h4>
-                <motion.h5
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                    transition: { duration: 1, ease: "easeInOut" },
-                  }}
-                >
-                  UX Engineer
-                </motion.h5>
+                <h4>Tanya Sinclair</h4>
+                <h5>UX Engineer</h5>
               </div>
             </>
           ) : (
@@ -94,7 +76,7 @@ const Testimonials = () => {
               </div>
             </>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
