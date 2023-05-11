@@ -22,6 +22,9 @@ body {
   width: 100%;
   height: 100vh;
   margin: auto;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .section-testimonial {
@@ -49,7 +52,6 @@ body {
   box-shadow: 20px 50px 50px -40px var(--darkBlue);
   border-radius: 5px;
 }
-
 .section-buttons {
   position: absolute;
   bottom: 10px;
@@ -136,13 +138,6 @@ button {
     position: relative;
   }
 
-  /*   .section-testimonial {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }   */
-
   .section-img {
     width: 46rem;
     height: 50rem;
@@ -159,14 +154,14 @@ button {
 
   .section-img img {
     margin: 30px 0px;
-    width: 34rem;
+    width: 33rem;
     box-shadow: 20px 50px 50px -40px var(--darkBlue);
   }
 
   .section-buttons {
     position: absolute;
-    top: 595px;
-    left: 140px;
+    top: 560px;
+    left: 160px;
     z-index: 1;
   }
 
@@ -195,6 +190,7 @@ button {
 
   .section-text p {
     font-weight: 300;
+    line-height: 45px;
   }
 
   .user {
