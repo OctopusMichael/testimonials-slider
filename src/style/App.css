@@ -52,9 +52,18 @@ body {
   box-shadow: 20px 50px 50px -40px var(--darkBlue);
   border-radius: 5px;
 }
+
+.box-img{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 .section-buttons {
   position: absolute;
   bottom: 10px;
+
+ 
 }
 
 button {
@@ -129,6 +138,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
   .section-testimonial {
     height: 70%;
@@ -158,10 +168,15 @@ button {
     box-shadow: 20px 50px 50px -40px var(--darkBlue);
   }
 
+  .box-img{
+    position: relative;
+
+  }
+
   .section-buttons {
     position: absolute;
-    top: 560px;
-    left: 160px;
+    bottom: 0px;
+    left: 50px;
     z-index: 1;
   }
 

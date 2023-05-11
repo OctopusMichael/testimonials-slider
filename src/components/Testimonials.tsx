@@ -28,11 +28,9 @@ const Testimonials = () => {
           className="section-img"
         >
           {slider ? (
+            <div className="box-img">
             <img src={avatar1} alt="img-1" />
-          ) : (
-            <img src={avatar2} alt="img-2" />
-          )}
-          <div className="section-buttons">
+            <div className="section-buttons">
             <button onClick={handlePrev} className="btn prev">
               {" "}
             </button>
@@ -40,6 +38,21 @@ const Testimonials = () => {
               {" "}
             </button>
           </div>
+            </div>
+          ) : (
+            <div className="box-img">
+              <img src={avatar2} alt="img-2" />
+              <div className="section-buttons">
+            <button onClick={handlePrev} className="btn prev">
+              {" "}
+            </button>
+            <button onClick={handlePrev} className="btn next">
+              {" "}
+            </button>
+          </div>
+            </div>
+          )}
+          
         </motion.div>
         <motion.div
           initial={{ x: -100, opacity: 0 }}
